@@ -9,4 +9,4 @@ const PuppySchema = new Schema({
   image: String
 })
 
-module.exports = mongoose.model('Profile', PuppySchema)
+module.exports = mongoose.model('Puppies', PuppySchema)
