@@ -20,6 +20,15 @@ app.post('/post', function(req, res) {
     .then(console.log, console.log)
 })
 
+app.get('/puppies', function(req, res) {
+  Puppy.find({}, function(err, data) {
+    if(err) {
+      res.send(err);
+    }
+    res.json(data);
+  })
+})
+
 
 app.listen(process.env.PORT || port, function() {
   console.log("app is listening")
