@@ -42,3 +42,5 @@ app.delete('/puppies/:id', function(req, res) {
 app.listen(process.env.PORT || port, function() {
   console.log("app is listening")
 })
+
+exports.app = app;
