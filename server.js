@@ -30,7 +30,7 @@ app.get('/puppies', function(req, res) {
 })
 
 app.delete('/puppies/:id', function(req, res) {
-  Puppy.remove({"_id": id}, function(err, data) {
+  Puppy.remove({"_id": req.params.id}, function(err, data) {
     if(err) {
       res.send(err);
     }
