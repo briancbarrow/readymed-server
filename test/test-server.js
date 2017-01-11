@@ -42,6 +42,7 @@ describe('POST /puppies', function() {
     })
     .end(function(err, res) {
       testId = res.body[0]._id;
+      console.log()
       should.equal(err, null);
       res.should.have.status(200);
       res.body[0].should.be.a('object');
