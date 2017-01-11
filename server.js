@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const Puppy = require('./models/puppies')
+const localUrl = require('./config')
 
 let app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -11,7 +12,7 @@ app.use(cors())
 
 const port = 8080
 const url = process.env.PROD_MONGODB
-mongoose.connect(url)
+mongoose.connect(url || localUrl)
 
 app.post('/post', function(req, res) {
   console.log(req.body)
