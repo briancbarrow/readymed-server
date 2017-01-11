@@ -29,6 +29,8 @@ describe('GET /puppies', function() {
       done();
     });
   });
+});
+describe('POST /puppies', function() {
   it('should post a puppy profile on POST', function(done) {
     chai.request(app)
     .post('/puppies', {
@@ -56,13 +58,14 @@ describe('GET /puppies', function() {
       done();
     });
   });
+});
+describe('DELETE /puppies', function() {
   it('should delete a puppy profile on DELETE', function(done) {
     chai.request(app)
     .delete('/puppies/' + testId)
     .end(function(err, res) {
       should.equal(err, null);
       res.should.have.status(200);
-      res.body.should.be(undefined)
       done();
     });
   });
