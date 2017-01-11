@@ -32,6 +32,7 @@ describe('GET /puppies', function() {
 });
 describe('POST /puppies', function() {
   it('should post a puppy profile on POST', function(done) {
+    this.timeout(10000)
     chai.request(app)
     .post('/puppies', {
       "name": "Russell",
