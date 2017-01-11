@@ -22,7 +22,6 @@ app.post('/puppies', function(req, res) {
   const puppy = new Puppy(req.body)
   puppy.save()
     .then(console.log, console.log)
-    assert.ok(!(query instanceof require('mpromise')));
 })
 
 app.get('/puppies', function(req, res) {
