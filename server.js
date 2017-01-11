@@ -37,7 +37,7 @@ app.delete('/puppies/:id', function(req, res) {
     if(err) {
       res.send(err);
     }
-    console.log(data);
+    console.log(data.data);
     res.json(data);
   })
 })
