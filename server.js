@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const Puppy = require('./models/puppies')
-const localUrl = require('./config')
+// const localUrl = require('./config')
 
 let app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
