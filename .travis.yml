@@ -8,3 +8,6 @@ addons:
     - mongodb-3.2-precise
     packages:
     - mongodb-org-server
+env:
+  matrix:
+    secure: gbi3tHVnzhNxd8hBUqg5JF2khwjIZTMl6WrQ/rjVVhmQZcIMA/6cvCu+lkH1NLkmNYBYvcW00QR0jRMT3BULTiNaioKeL8E9LPr0r2m4bpQ1RN8VetfDaLv44t0P+OF8GTB/nHQrJpiD9iNt+qqdseDK/lUiUhyN5xQyN0l8cdJUWiYZRfbKkK5HE/G43cfWaEGch/cxHtARguTecIZ6pgnNjPxl0ws5q+vFhF1Jnf/Z/N9dNtc7xiKtuk0UNjsr2sGX2DLiuavQ7GdJvFQzK2IRX0jE7CBWsYmBAj0ylV75QrFBkEupDVl7CxRcFimsTbB2+mTTCJdQyTpj9QQ9nJ5YyB/5lJ8bNZ1kz0qw0Kf5bV2zssTTcHDlas+eyrlx2Hp4cDELApwsojlBsv+T/00xtEb6dCqx136sEBFbf1Vc0wKMFdWNZ1/+brGht9jXtVu/4Fzb1kBvCTMvHrG+xIQ771Mk6HZZ/XgOdqp2/Q2m6ZuR1i/gUnnYQaqDw1/qtOxvU9rCQCuKzLk0t0KMOd0OPX7hGRGRB30aRTbWQArVqP8x+9BeIS+F8ZvP5nQdBJFOVAMRUF5HS1uiCqt4XS05s4lAoUJdFcbwtdH01bj08Pa98Ko4Hxnp0v1azvN7bnU54SpS9L1Da/4CfijiHWSbnwCABG5ZdffDjEE2Qkw=
