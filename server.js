@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const Puppy = require('./models/puppies')
-// const localUrl = require('./config')
+const localUrl = require('./config')
 
 let app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -12,10 +12,12 @@ app.use(cors())
 
 const port = 8080
 const url = process.env.PROD_MONGODB
-mongoose.connect(url)
+mongoose.connect(url || localUrl)
 
-app.post('/post', function(req, res) {
-  console.log(req.body)
+app.post('/puppies', function(req, res) {
+  if(!req.body) {
+    res.status(400)
+  }
   const puppy = new Puppy(req.body)
   puppy.save()
     .then(console.log, console.log)
@@ -35,6 +37,7 @@ app.delete('/puppies/:id', function(req, res) {
     if(err) {
       res.send(err);
     }
+    console.log(data);
     res.json(data);
   })
 })
