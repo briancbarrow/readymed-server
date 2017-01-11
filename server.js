@@ -21,7 +21,7 @@ app.post('/puppies', function(req, res) {
   }
   const puppy = new Puppy(req.body)
   puppy.save()
-    .then(console.log, console.log)
+    .exec(console.log, console.log)
 })
 
 app.get('/puppies', function(req, res) {

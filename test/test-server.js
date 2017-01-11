@@ -10,6 +10,7 @@ chai.use(chaiHttp);
 
 describe('GET /puppies', function() {
   it('should retrieve list of items on GET', function(done) {
+    this.timeout(10000)
     chai.request(app)
     .get('/puppies')
     .end(function(err, res) {
